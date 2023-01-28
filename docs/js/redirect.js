@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000'
+const API_URL = 'https://link-shortener-5aw5.onrender.com'
 
 getLink = () => {
     let prefix = document.URL.split('/').pop().split('.')[0]
