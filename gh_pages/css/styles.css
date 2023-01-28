@@ -1,0 +1,73 @@
+html {
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(49, 0, 223));
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.h1-title {
+    vertical-align: middle;
+    text-align: center;
+    color: #2b59b0;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.input-btn {
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: 40px;
+}
+
+.input-btn>input {
+    padding: 5px;
+    font-size: 15px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.input-btn>button {
+    width: 30%;
+    min-width: 140px;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: rgb(196, 197, 255);
+    border: none;
+    color: rgb(54, 34, 168);
+}
+
+.div-url {
+    margin-top: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.div-url>div {
+    color: rgb(74, 76, 228);
+    font-size: 30px;
+}
+
+.div-url>a {
+    color: rgb(0, 2, 113);
+    font-size: 30px;
+}
+
+.link-to-github {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.link-to-github>a {
+    color: wheat
+}
