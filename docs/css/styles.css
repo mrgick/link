@@ -44,6 +44,13 @@ html {
     color: rgb(54, 34, 168);
 }
 
+#url-invalid {
+    margin: 5px;
+    padding: 5px;
+    color: #600000;
+    font-size: 20px;
+}
+
 .div-url {
     margin-top: 20px;
     vertical-align: middle;

@@ -1,23 +1,22 @@
-const API_URL = 'https://link-shortener-5aw5.onrender.com'
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-getLink = () => {
-    let prefix = document.URL.split('/').pop().split('.')[0]
-    let params = {
-        prefix: prefix
+const getLink = async () => {
+    let prefix = document.URL.split('/').pop().split('.')[0];
+    try {
+        link = await getLinkByPrefix(prefix);
+        if (!link.url) {
+            throw 'bad url';
+        }
+        window.location.replace(link.url);
     }
-    fetch(API_URL + '/link/?' + new URLSearchParams(params),
-        {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
+    catch {
+        let desc = document.getElementById('decription');
+        for (let time = 5; time > 0; time--) {
+            desc.innerHTML = 'Bad prefix, redirecting to home page. ' + time.toString() + ' second';
+            await sleep(1000);
         }
-    ).then(res => res.json())
-        .then(result => {
-            console.log("Ссылка", result)
-            window.location.replace(result.url);
-        }
-        )
+        window.location.replace(new URL('index.html', document.URL));
+    }
 };
 
-window.onload = () => getLink();
+window.onload = async () => await getLink();

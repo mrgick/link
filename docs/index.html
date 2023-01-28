@@ -14,6 +14,7 @@
     <title>Link shortener</title>
 
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/api.js"></script>
     <script src="js/index.js" defer></script>
 </head>
 
@@ -23,6 +24,7 @@
     </div>
     <div class="input-btn">
         <input id="create-input" placeholder="http://example.com" type="url" pattern="https?://.+" required />
+        <div id="url-invalid" hidden="true">Invalid url!</div>
         <button id="create-btn">Create short link</button>
     </div>
     <div class="div-url" hidden="true">
